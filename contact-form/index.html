@@ -8,17 +8,53 @@
   <title>Frontend Mentor | Contact form</title>
 </head>
 <body>
-  <div class="main">
-    <h1>Contact Us</h1>
-    <div class="form-input">
-      <label for="first-name">First Name *</label>
-      <input type="text" id="first-name" name="first-name">
-    </div>
-    <input type="submit" class="submit">
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form>
+      <section id="name">
+        <div class="form-input">
+          <input type="text" id="first-name" required >
+          <label>First Name <span>*</span></label>
+          <p id="error-msg-fn"></p>
+        </div>
+        <div class="form-input">
+          <input type="text" id="last-name" required >
+          <label>Last Name <span>*</span></label>
+          <p id="error-msg-ln"></p>
+        </div>
+      </section>
+      <section id="email-form">
+        <div class="form-input">
+          <input type="email" id="email" required >
+          <label>Email Address <span>*</span></label>
+          <p id="error-msg-e"></p>
+        </div>
+      </section>
+      <section class="form-input" id="radio-buttons">
+        <div class="radioBackground">
+          <input type="radio" id="radio1" name="query-type" value="general" required>
+          <label for="radio1">General Enquiry</label>
+        </div>
+        <div class="radioBackground">
+          <input type="radio" id="radio2" name="query-type" value="support" required>
+          <label for="radio2">Support Request</label>
+        </div>
+        <label>Query Type <span>*</span></label>
+        <p id="error-msg-q"></p>
+      </section>
+      <div id="message" class="form-input">
+        <textarea id="message-box" required></textarea>
+        <label>Message <span>*</span></label>
+        <p id="error-msg-m"></p>
+      </div>
+      <div class="consent">
+        <input type="checkbox" id="consent-box" required> I consent to being contacted by the team <span>*</span>
+        <p id="error-msg-c"></p>
+      </div>
+      <button>Submit</button>
+    </form>
   </div>
-
-
-
+  <script src="script.js"></script>
 </body>
 </html>
 

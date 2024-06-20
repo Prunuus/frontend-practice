@@ -1,23 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: hsl(148, 38%, 91%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Karla;
+    font-weight: 400;
+    color: hsl(187, 24%, 22%);
+
 }
 
-.main {
-    background-color: hsl(0, 0%, 100%);
-    width: 650px;
-    height: 600px;
+span {
+    color:hsl(186, 15%, 59%);
+}
+
+h2 {
+    margin: 15px 0 30px 0;
+    color: hsl(187, 24%, 22%);
+}
+
+.form-container {
+    background-color: white;
     padding: 25px;
-    border-radius: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
 }
 
-@media screen and (max-width: 500px) ,(max-height:600px) {
-    .main {
-        width: 60vw;
-        height: 75vh;
+.form-input {
+    margin: 30px 0;
+    position: relative;
+}
+
+.form-input input {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid hsl(186, 15%, 59%);
+    padding: 5px;
+    text-justify: start;
+    cursor:auto;
+    user-select: none;
+
+}
+
+.form-input input:hover{
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+.form-input input:focus{
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+
+}
+
+.form-input label {
+    position: absolute;
+    left: 1px;
+    top: -25px;
+    font-size: 16px;
+    pointer-events: none;
+    color: hsl(187, 24%, 22%);
+
+}
+
+/* #error-msg {
+    position: absolute;
+    left: 1px;
+    top: 45px;
+    font-size: 16px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+
+} */
+
+#name {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 16px;
+}
+
+#name div {
+    width: 100%
+}
+
+
+#radio-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.radioBackground{
+    border: 1px solid hsl(186, 15%, 59%);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+#radio-buttons div label {
+    position: relative;
+    top: 1px;
+    transform: translateY(-1px);
+    pointer-events: auto;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#radio-buttons input{
+    height: 15px;
+    width:15px;
+    border: 1px solid hsl(186, 15%, 59%);
+    margin-right: 10px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+
+/* #radio-buttons input:focus{
+    background-color: hsl(148, 38%, 91%);
+    accent-color: hsl(169, 82%, 27%);
+} */
+
+#email-form {
+    margin: 0 0 20px 0;
+}
+
+#message textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 5px;
+    font-size: 16px;
+    font-family: Karla;
+    font-weight: 400;
+    border-radius: 8px
+}
+
+#message textarea:focus {
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(169, 82%, 27%);
+    height: 50px;
+    color: white;
+    margin: 20px 0px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    user-select: none;
+
+}
+
+
+
+button:hover {
+    background-color: hsl(169, 77%, 17%);
+}
+
+.consent input{
+    margin-right: 15px;
+    user-select: none;
+}
+
+.consent input:focus{
+    accent-color: hsl(169, 82%, 27%);
+}
+
+@media screen and (max-width: 600px){
+    #name {
+        flex-wrap: wrap;
+    }
+    #message textarea {
+        height: 250px;
+    }
+    #radio-buttons {
+        flex-wrap: wrap;
+    }
+    .form-container {
+        width: 95vw;
+        height: 99vh;
     }
 }
 
+
+.error-msg-n {
+    position: absolute;
+    left: 1px;
+    top: 45px;
+    font-size: 12px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+}
+
+.error-msg-e {
+    position: absolute;
+    left: 1px;
+    top: 45px;
+    font-size: 12px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+}
+
+.error-msg-q1 {
+    position: absolute;
+    left: 1px;
+    top: 55px;
+    font-size: 12px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+}
+
+.error-msg-q2 {
+    position: absolute;
+    left: 1px;
+    top: 110px;
+    font-size: 12px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+}
+
+
+.error-msg-m1 {
+    position: absolute;
+    left: 1px;
+    top: 100px;
+    font-size: 12px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+}
+
+.error-msg-m2 {
+    position: absolute;
+    left: 1px;
+    top: 255px;
+    font-size: 12px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+}
+
+.consent {
+    position: relative;
+}
+
+.error-msg-c {
+    display: block;
+    font-size: 12px;
+    pointer-events: none;
+    color: hsl(0, 66%, 54%);
+}
